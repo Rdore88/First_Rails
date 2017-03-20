@@ -1,24 +1,31 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This program allows a user to view a general welcome message, a personalized message depending
+on the name entered and the ability to get random themed lorem ipsum printed out.
 
-Things you may want to cover:
+### Ruby version
+This program uses Ruby 2.3.3 and Rails 5.0.2
 
-* Ruby version
+### How to run the test suite
+```rubyonrails
+$ rails test
+```
+Open the command prompt when you are in the main folder and type the above to run all of the tests in the application.
 
-* System dependencies
+### Homepage
+```ruby
+"/"
+```
+This is the homepage for the web app. This will output a general welcome statement.
 
-* Configuration
+### Customized Welcome
+```ruby
+"/:name"
+```
+Type this a the path to get a personalized welcome because this will pass whatever is written for :name as a parameter to be used in the welcome.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Lorem Ipsum
+```ruby
+"/lorem/:type(/:number)"
+```
+This program supports three different types of lorem ipsum: bacon, zombie and cheese. write in which ever type you want for :type and an optional amount of paragraphs (1-4) for the :number. 
