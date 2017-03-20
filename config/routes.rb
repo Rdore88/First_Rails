@@ -3,4 +3,7 @@ Rails.application.routes.draw do
 
 
   get "/", controller: "welcome", action: "homepage"
+
+  get "/:name", controller: "welcome", action: "custom"
+  
 end
