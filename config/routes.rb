@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get "/", controller: "welcome", action: "homepage"
 
-  get "/lorem/:type", controller: "welcome", action: "lorem"
+  get "/lorem/:type(/:number)", controller: "welcome", action: "lorem"
 
   get "/:name", controller: "welcome", action: "custom"
 
