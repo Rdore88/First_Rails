@@ -6,5 +6,6 @@ class WelcomeController < ApplicationController
 
   def custom
     @name = params["name"]
+    render "custom"
   end
 end
