@@ -1,10 +1,14 @@
 require 'test_helper'
 
-class BookingTest < ActionDispatch::IntegrationTest
+class WelcomeTest < ActionDispatch::IntegrationTest
 
   test "homepage" do
     get "/"
     assert_includes @response.body, "Welcome"
   end
 
+  test  "custom"  do
+    get "/Russell"
+    assert_includes @response.body, "Russell"
+  end
 end
